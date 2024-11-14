@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="14-11-2024-create-user-table" author="Aleksandr_Bezrukov">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="${prefix}_user"/>
+            </not>
+        </preConditions>
+        <createTable tableName="${prefix}_user">
+            <column name="id" type="bigint">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="user_id_pk"/>
+            </column>
+            <column name="last_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="first_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="middle_name" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="14-11-2024-create-sequence-user-id" author="Aleksandr_Bezrukov">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <sequenceExists sequenceName="${prefix}_user_id_seq"/>
+            </not>
+        </preConditions>
+        <createSequence sequenceName="${prefix}_user_id_seq" incrementBy="50" minValue="1"/>
+    </changeSet>
+</databaseChangeLog>

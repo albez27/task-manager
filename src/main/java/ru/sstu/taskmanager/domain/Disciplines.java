@@ -1,4 +1,4 @@
-package ru.sstu.taskmanager;
+package ru.sstu.taskmanager.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,7 +9,7 @@ import lombok.Setter;
 import lombok.experimental.Accessors;
 
 /**
- * Роли.
+ * Disciplines.
  *
  * @author Aleksandr_Bezrukov
  */
@@ -17,12 +17,16 @@ import lombok.experimental.Accessors;
 @Getter
 @Setter
 @Accessors(chain = true)
-public class Roles {
+public class Disciplines {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
+    Long teacherCount;
+
     String name;
+
+    String description;
 
 }
