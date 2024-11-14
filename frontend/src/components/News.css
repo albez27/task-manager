@@ -1,0 +1,10 @@
+/* src/components/News.css */
+.news-card {
+    margin-bottom: 24px;
+  }
+  
+  .news-card img {
+    object-fit: cover;
+    height: 150px;
+  }
+  
