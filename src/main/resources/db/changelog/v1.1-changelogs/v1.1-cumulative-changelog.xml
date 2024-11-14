@@ -3,7 +3,7 @@
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
-    <property name="prefix" value="tm"/>
-    <include file="v1.1-changelogs/v1.1-cumulative-changelog.xml" relativeToChangelogFile="true"/>
-    
+
+    <include file="v1.1.0-add-task-table.xml" relativeToChangelogFile="true"/>
+    <include file="v1.1.1-add-user-table.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>

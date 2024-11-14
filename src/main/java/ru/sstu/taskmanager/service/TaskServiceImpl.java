@@ -1,7 +1,8 @@
-package ru.sstu.taskmanager;
+package ru.sstu.taskmanager.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import ru.sstu.taskmanager.domain.Task;
 
 import java.util.List;
 

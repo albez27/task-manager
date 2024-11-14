@@ -1,4 +1,4 @@
-package ru.sstu.taskmanager;
+package ru.sstu.taskmanager.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

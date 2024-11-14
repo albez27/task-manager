@@ -1,4 +1,4 @@
-package ru.sstu.taskmanager;
+package ru.sstu.taskmanager.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

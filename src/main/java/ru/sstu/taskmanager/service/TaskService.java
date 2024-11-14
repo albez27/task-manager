@@ -1,4 +1,6 @@
-package ru.sstu.taskmanager;
+package ru.sstu.taskmanager.service;
+
+import ru.sstu.taskmanager.domain.Task;
 
 import java.util.List;
 

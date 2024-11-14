@@ -1,32 +1,26 @@
-package ru.sstu.taskmanager;
+package ru.sstu.taskmanager.dto;
 
-import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.experimental.Accessors;
+import lombok.AccessLevel;
+import lombok.Data;
+import lombok.experimental.FieldDefaults;
+import ru.sstu.taskmanager.domain.Roles;
 
 import java.util.List;
 
 /**
- * Пользователи.
+ * UserDto.
  *
  * @author Aleksandr_Bezrukov
  */
-@Entity
-@Getter
-@Setter
-@Accessors(chain = true)
-public class User {
+@Data
+@FieldDefaults(level = AccessLevel.PRIVATE)
+public class UserDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
 
 //    @ManyToMany(mappedBy = "userList")
 //    List<Task> tasks;
@@ -40,8 +34,9 @@ public class User {
 //    @ManyToMany(mappedBy = "userList")
 //    List<Disciplines> disciplines;
 
-    @OneToMany
-    @JoinColumn(name = "role_id")
-    List<Roles> roles;
+//    @OneToMany
+//    @JoinColumn(name = "role_id")
+//    List<Roles> roles;
+
 
 }
